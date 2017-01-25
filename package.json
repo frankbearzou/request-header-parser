@@ -1,0 +1,26 @@
+{
+  "name": "request-header-parser",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/frankbearzou/request-header-parser.git"
+  },
+  "author": "Frank Zou",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/frankbearzou/request-header-parser/issues"
+  },
+  "homepage": "https://github.com/frankbearzou/request-header-parser#readme",
+  "engines": {
+    "node": "7.4.0"
+  },
+  "dependencies": {
+    "express": "^4.14.0"
+  }
+}
