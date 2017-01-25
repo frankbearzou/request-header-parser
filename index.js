@@ -4,6 +4,8 @@ var app = express();
 //app.enable('trust proxy');
 
 app.get('/', (req, res) => {
+  res.send('hello');
+/*
   let ip = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
   console.log('ip:', ip);
   let language = req.acceptsLanguages()[0];
@@ -21,6 +23,7 @@ app.get('/', (req, res) => {
 
   // res.json(ret);
   res.send(JSON.stringify(res));
+  */
 });
 
 app.listen(5000, () => console.log('app listening on port 5000!'));
