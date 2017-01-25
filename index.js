@@ -9,7 +9,7 @@ app.get('/', (req, res) => {
   let language = req.acceptsLanguages()[0];
   let software = req.headers['user-agent'];
 
-  if (ip.substr(0, 7) == "::ffff:") {
+  if (ip && ip.substr(0, 7) === "::ffff:") {
     ip = ip.substr(7)
   }
 
@@ -19,7 +19,8 @@ app.get('/', (req, res) => {
     'software': software
   };
 
-  res.json(ret);
+  // res.json(ret);
+  res.send(JSON.stringify(res));
 });
 
 app.listen(5000, () => console.log('app listening on port 5000!'));
