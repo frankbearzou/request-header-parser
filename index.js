@@ -19,8 +19,7 @@ app.get('/', (req, res) => {
     'software': software
   };
 
-  // res.json(ret);
-  res.send(JSON.stringify(res));
+  res.json(ret);
 });
 
 app.listen(process.env.PORT || 5000, () => console.log('app listening on port 5000!'));
