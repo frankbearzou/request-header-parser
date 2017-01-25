@@ -4,8 +4,8 @@ var app = express();
 app.enable('trust proxy');
 
 app.get('/', (req, res) => {
-  console.log('req.ip:', req.ip);
-  let ip = req.ip;
+  let ip = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
+  console.log('ip:', ip);
   let language = req.acceptsLanguages()[0];
   let software = req.headers['user-agent'];
 
