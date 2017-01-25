@@ -1,7 +1,7 @@
 var express = require('express');
 var app = express();
 
-app.enable('trust proxy');
+//app.enable('trust proxy');
 
 app.get('/', (req, res) => {
   let ip = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
